@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * maain- prints the below message
+ * main - prints the below message
+ *
+ * return: always 0
  */
 
 int main(void)
