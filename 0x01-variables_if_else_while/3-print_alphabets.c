@@ -18,14 +18,13 @@ int main(void)
 		putchar(a);
 		a++;
 	}
-
-	putchar('\n');
-
 	while (c <= 'Z')
 	{
 		putchar(c);
 		c++;
 	}
+
+	putchar('\n');
 
 	return (0);
 }
