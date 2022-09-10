@@ -3,7 +3,7 @@
 /**
  * main - prints alphabet
  *
- * Return : always 0
+ * Return: always 0
  */
 
 int main(void)
@@ -12,11 +12,12 @@ int main(void)
 
 	c = 'a';
 
-	while (c <= "z")
+	while (c <= 'z')
 	{
 		putchar(c);
+		putchar('\n');
 		c++;
 	}
-		putchar('\n');
-		return (0);
+
+	return (0);
 }
