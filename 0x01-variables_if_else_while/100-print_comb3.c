@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			if (a != b && a >= (b - 1))
+			if (a != b && a <= (b - 1) >= 0)
 			{
 				c = a + '0';
 				d = b + '0';
