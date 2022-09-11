@@ -8,13 +8,15 @@
 
 int main(void)
 {
-	int a, b, c, d;
+	int a, b, c, d, e;
 
 	for (a = 0; a <= 8; a++)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			if (a != b && a <= (b - 1) && (b - 1) >= 0)
+			e = b - 1;
+
+			if (a != b && a <= e && e >= 0)
 			{
 				c = a + '0';
 				d = b + '0';
