@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - combo
+ * main - prints combination.
  *
  * Return: always 0
  */
@@ -24,6 +24,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+		a++;
 	}
 	putchar('\n');
 
