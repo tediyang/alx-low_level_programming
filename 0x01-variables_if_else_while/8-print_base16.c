@@ -6,15 +6,16 @@
  * Return: always 0
  */
 
-int main (void)
+int main(void)
 {
-	int a;
+	int a, c;
 
 	char b;
 
 	for (a = 0; a <= 9; a++)
 	{
-		putchar(a);
+		c = a + '0';
+		putchar(c);
 	}
 	for (b = 'a'; b <= 'f'; b++)
 	{
