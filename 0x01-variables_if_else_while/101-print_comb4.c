@@ -2,7 +2,7 @@
 
 /**
  * main - prints 3 digits combo
- * 
+ *
  * Return: always 0
  */
 
@@ -16,7 +16,7 @@ int main(void)
 		{
 			for (c = 2; c <= 9; c++)
 			{
-				if (b > a && c > b && b > 1)
+				if (b > a && c > b && b >= 1)
 				{
 					putchar(a + '0');
 					putchar(b + '0');
