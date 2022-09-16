@@ -13,10 +13,12 @@ void more_numbers(void)
 	for (c = 0; c < 10; c++)
 	{
 		for (d = 0; d <= 14; d++)
+		{
 			if (d >= 10)
 				_putchar((j / 10) + '0');
 			else
 				_putchar((j % 10) + '0');
+		}
 
 		_putchar('\n');
 	}
