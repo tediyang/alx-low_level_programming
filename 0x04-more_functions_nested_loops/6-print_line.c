@@ -3,7 +3,7 @@
 /** 
  * print_line - prints line
  *
- * @n: parameter
+ * @n: param
  */
 
 void print_line(int n)
@@ -15,6 +15,5 @@ void print_line(int n)
 		_putchar(95);
 		a++;
 	}
-
 	_putchar('\n');
 }
