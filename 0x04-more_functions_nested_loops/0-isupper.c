@@ -3,7 +3,7 @@
 /**
  * isupper - check if the character is upper.
  *
- * Return; always 0
+ * Return: always 0
  */
 
 int _isupper(int c)
@@ -12,6 +12,4 @@ int _isupper(int c)
 		return (1);
 	else
 		return (0);
-
-	_putchar('\n');
 }
