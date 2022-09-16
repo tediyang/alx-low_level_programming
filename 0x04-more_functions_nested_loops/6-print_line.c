@@ -2,7 +2,7 @@
 
 /** print_line - prints line
  * @n: parameter
- * return: void
+ * Return: void
  */
 
 void print_line(int n)
