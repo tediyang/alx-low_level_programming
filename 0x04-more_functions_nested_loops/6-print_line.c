@@ -2,14 +2,17 @@
 
 /** 
  * print_line - prints line
- *
- * @n: param
+ * @n: parameter
  */
 
 void print_line(int n)
 {
-	while (n--)
-		_putchar(95);
+	int a = 1;
 
+	while (a <= n)
+	{
+		_putchar(95);
+		a++;
+	}
 	_putchar('\n');
 }
