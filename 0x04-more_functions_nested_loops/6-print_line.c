@@ -8,12 +8,8 @@
 
 void print_line(int n)
 {
-	int a = 1;
-
-	while (a <= n)
-	{
+	while (--n)
 		_putchar(95);
-		a++;
-	}
+
 	_putchar('\n');
 }
