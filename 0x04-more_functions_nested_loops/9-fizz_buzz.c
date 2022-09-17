@@ -3,10 +3,10 @@
 /**
  * main - prints divisors
  *
- * Return: void
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int c;
 
@@ -22,4 +22,5 @@ void main(void)
 			printf("%d ", c);
 	}
 	printf("Buzz\n");
+	return (0);
 }
