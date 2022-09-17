@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * print_line - prints line
  * @n: parameter
  */
@@ -9,11 +9,17 @@ void print_line(int n)
 {
 	int a = 1;
 
-	while (a <= n)
+	if (n > 0)
 	{
-		_putchar(95);
-		a++;
+		while (a <= n)
+		{
+			_putchar(95);
+			a++;
+		}
+		_putchar('\n');
 	}
-
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
