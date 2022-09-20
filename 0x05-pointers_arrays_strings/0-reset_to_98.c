@@ -2,10 +2,10 @@
 
 /**
  * reset_to_98 - changes the value of the pointer.
- * @n - pointer param
+ * @*n - pointer param
  */
 
 void reset_to_98(int *n)
 {
-	*n = 98;
+l	*n = 98;
 }
