@@ -5,7 +5,7 @@
  * @dest: point param
  * @src: point param
  * @n: int param
- * Return: dest 
+ * Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
