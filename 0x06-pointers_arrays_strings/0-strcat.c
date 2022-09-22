@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 	int a, b;
 
 	a = 0;
-	/*find the length of the dest file*/
+
 	while (dest[a])
 		a++;
 
