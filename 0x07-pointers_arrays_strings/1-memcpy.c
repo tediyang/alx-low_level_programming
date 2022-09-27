@@ -19,18 +19,13 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	while (src[a])
 		a++;
 
-	if (a > n)
+	if ((a - 1) > n)
 		for (b = 0; b < n; b++)
 			dest[b] = src[b];
 
 	else
-	{
 		for (b = 0; b < a; b++)
 			dest[b] = src[b];
-
-		for (; b < n; c++)
-			dest[b] = '\0';
-	}
 
 	return (dest);
 }
