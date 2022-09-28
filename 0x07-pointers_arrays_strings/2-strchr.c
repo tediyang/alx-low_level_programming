@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 		{
 			for (; j <= i; j++)
 			{
-				p[k] = s[k];
+				p[k] = s[j];
 				k++;
 			}
 			return (p);
