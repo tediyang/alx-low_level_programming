@@ -14,12 +14,14 @@ char *_strchr(char *s, char c)
 	int i, j, k;
 	char *p;
 
-	i = k = 0;
+	i = 0;
+	k = 0;
 
 	while (s[i])
 		i++;
 
 	for (j = 0; j <=i; j++)
+	{
 		if (s[j] == c)
 		{
 			for (; j <= i; j++)
@@ -29,6 +31,7 @@ char *_strchr(char *s, char c)
 			}
 			return (p);
 		}
+	}
 
 	return (NULL);
 }
