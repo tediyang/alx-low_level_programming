@@ -34,7 +34,7 @@ int palindrome(char *s, unsigned int i)
 
 	if ((j - 1) <= i)
 		return (1);
-	else if (s[0] != s[j - i -1])
+	else if (s[0] != s[j - i - 1])
 		return (0);
 	else
 		return (palindrome(s + 1, i + 1));
