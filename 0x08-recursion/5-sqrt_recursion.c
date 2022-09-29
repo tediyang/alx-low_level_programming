@@ -2,7 +2,6 @@
 
 /**
  * _sqrt_recursion - prints the square root of a number using recursion
- * check_sum - prints the square root
  *
  * @n: param
  * @b: param
@@ -24,6 +23,11 @@ int _sqrt_recursion(int n)
 		return (check_num(n, 2));
 }
 
+/**
+ * check_num - prints the square root
+ *
+ * Return: the value
+ */
 
 int check_num(int n, int b)
 {
