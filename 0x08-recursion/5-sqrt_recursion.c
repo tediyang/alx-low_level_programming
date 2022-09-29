@@ -8,7 +8,7 @@
  * Return: the square root
  */
 
-int check_num(int, int);
+int check_num(int n, int b);
 
 int _sqrt_recursion(int n)
 {
