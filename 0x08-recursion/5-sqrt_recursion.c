@@ -26,6 +26,9 @@ int _sqrt_recursion(int n)
 /**
  * check_num - prints the square root
  *
+ * @n: divided
+ * @b: divisor
+ *
  * Return: the value
  */
 
