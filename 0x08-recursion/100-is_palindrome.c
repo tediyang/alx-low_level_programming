@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * is_palindrome - returns what the function palindrome return.
@@ -27,10 +28,9 @@ int is_palindrome(char *s)
 
 int palindrome(char *s, unsigned int i)
 {
-	unsigned int j = 0;
+	unsigned int j;
 
-	while (s[j])
-		++j;
+	j = strlen(s);
 
 	if ((j - 1) <= i)
 		return (1);
