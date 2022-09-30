@@ -6,7 +6,7 @@
  * @argc: command line args count
  * @argv: command line args array
  *
- * Return: 0 or 1
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%d\n", (atoi(argv[argc - 1]) * atoi(argv[argc - 2]));
+		printf("%d\n", (atoi(argv[argc - 1]) * atoi(argv[argc - 2])));
 	}
 	return (0);
 }
