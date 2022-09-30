@@ -6,7 +6,7 @@
  *
  * @s: param
  *
- * Return: 1 or 0
+ * Return: 0
  */
 
 int is_int(const char *s)
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 			print("Error\n");
 			return (1);
 		}
-		sum += atoi(argv[i]);
+		sum += atoi(argv[argc]);
 	}
 	printf("%i\n", sum);
 	return (0);
