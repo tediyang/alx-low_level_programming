@@ -13,8 +13,12 @@ int is_int(const char *s)
 {
 	int i = 0;
 
-	if (s[i] < '0' || s[i] > '9')
-		return (1);
+	while (s[i] != '\0')
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (1);
+		++i;
+	}
 	return (0);
 }
 
@@ -29,26 +33,16 @@ int is_int(const char *s)
 
 int main(int argc, char *argv[])
 {
-	int i;
 	int sum = 0;
-	
-	if (argc < 2)
-	{
-		printf("0\n");
-		return (0);
-	}
 
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		if (is_int(argv[i]))
+		if (is_int(argv[argc]))
 		{
 			print("Error\n");
 			return (1);
 		}
-		else
-		{
-			sum += atoi(argv[i]);
-		}
+		sum += atoi(argv[i]);
 	}
 	printf("%i\n", sum);
 	return (0);
