@@ -9,7 +9,7 @@
  * Return: 1 or 0
  */
 
-int is_int(char *s)
+int is_int(const char *s)
 {
 	if (s[0] >= '0' && s[0] <= '9')
 		return (1);
