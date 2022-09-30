@@ -4,7 +4,7 @@
  * main - prints the program name
  *
  * @argc: param
- * @argv: param
+ * @argv[]: param
  *
  * Return: 0
  */
