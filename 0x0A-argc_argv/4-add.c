@@ -11,7 +11,7 @@
 
 int is_int(char *s)
 {
-	if (s[0] >= '0' || s[0] <= '9')
+	if (s >= '0' && s <= '9')
 		return (1);
 	return (0);
 }
