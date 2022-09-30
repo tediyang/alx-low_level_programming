@@ -11,7 +11,9 @@
 
 int is_int(const char *s)
 {
-	if (s[0] >= '0' && s[0] <= '9')
+	int i = 0;
+
+	if (s[i] < '0' || s[i] > '9')
 		return (1);
 	return (0);
 }
@@ -39,11 +41,13 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		if (is_int(argv[i]))
-			sum += atoi(argv[i]);
-		else
 		{
 			print("Error\n");
 			return (1);
+		}
+		else
+		{
+			sum += atoi(argv[i]);
 		}
 	}
 	printf("%i\n", sum);
