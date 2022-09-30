@@ -3,14 +3,14 @@
 /**
  * main - prints the program name
  *
- * @argc: param
- * @argv[]: param
+ * @argc: command line args count
+ * @argv[]: command line args array
  *
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", argv[argc - 1]);
 	return (0);
 }
