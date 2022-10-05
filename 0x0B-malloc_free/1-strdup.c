@@ -16,8 +16,8 @@ char *_strdup(char *str)
 
 	i = 0;
 
-	if (str == '\0')
-		return ('\0');
+	if (str == NULL)
+		return (NULL);
 
 	while (str[++i]);
 
@@ -29,5 +29,5 @@ char *_strdup(char *str)
 	for (j = 0; str[j]; j++)
 		mem[j] = str[j];
 
-	return (array);
+	return (mem);
 }
