@@ -19,7 +19,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	while (str[++i]);
+	while (str[++i])
+		;
 
 	mem = (char *)malloc(sizeof(char) * (i + 1));
 
