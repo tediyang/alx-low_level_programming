@@ -26,7 +26,7 @@ char *_memset(char *mem, unsigned int a, unsigned int space)
  * @nmemb: param
  * @size: param
  *
- * Return
+ * Return: pointer void
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
