@@ -2,9 +2,12 @@
 
 /**
  * main - prints the current file
+ *
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	prinf("%s\n", __FILE__);
+	return (0);
 }
