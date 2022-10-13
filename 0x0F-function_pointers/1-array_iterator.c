@@ -1,18 +1,16 @@
 /**
- * array_iterator - print array
+ * array_iterator - print array in different forms specified.
  *
  * @array: array param
  * @size: size
- * @action: function pointer.
- *
- * Return: nothing
+ * @action: function pointer
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
 
-	if (array != NULL && size > 0 && action != 0)
+	if (array && size && action)
 		for (i = 0; i < size; i++)
 			action(array[i]);
 }
