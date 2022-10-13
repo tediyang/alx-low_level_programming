@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * array_iterator - print array in different forms specified.
  *
