@@ -5,7 +5,7 @@
  * @size: size param
  * @cmp: cmp param
  *
- * Return:
+ * Return: index if found and -1 if not found
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
