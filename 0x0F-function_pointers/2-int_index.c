@@ -1,5 +1,3 @@
-#include "function_pointers.h"
-
 /**
  * int_index - return the index of the number.
  *
