@@ -10,10 +10,7 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	if (!separator)
-		printf("\n");
-
-	else
+	if (separator)
 	{
 		unsigned int i;
 		va_list args;
