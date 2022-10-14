@@ -1,5 +1,13 @@
 #include <stdarg.h>
 
+/**
+ * sum_them_all - prints the sum.
+ *
+ * @n: total number to sum.
+ *
+ * Return: the sum
+ */
+
 int sum_them_all(unsigned int n, ...)
 {
 	unsigned int i, sum = 0;
