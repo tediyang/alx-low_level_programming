@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_list - prints the lists.
@@ -25,5 +26,6 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		count++;
 	}
+
 	return (count);
 }
