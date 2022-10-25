@@ -2,25 +2,20 @@
 #define LISTS_H
 
 /**
- * print_listint - print list
+ * struct listint_s - singly linked list
  *
- * @h: listnode
+ * @n: integer
+ * @next: points to the next node.
  *
- * Return: returns the number of count.
+ * Description: singly linked listnode
  */
 
-size_t print_listint(const listint_t *h)
+typedef struct listint_s
 {
-	int count = 0;
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-	while (h != NULL)
-	{
-		printf("%d\n", h->n);
+size_t print_listint(const listint_t *h);
 
-		if (h != NULL)
-			h = (h->next == NULL) ? NULL: h->next;
-
-		count++;
-	}
-	return (count);
-}
+#endif /* ifndef */
