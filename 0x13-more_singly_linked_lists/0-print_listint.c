@@ -2,21 +2,6 @@
 #include "lists.h"
 
 /**
- * struct listint_s -singly linked list
- *
- * @n: integer
- * @next: points to the next node.
- *
- * Description: singly linked listnode
- */
-
-typedef struct listint_s
-{
-	int n;
-	struct listint_s *next;
-} listint_t;
-
-/**
  * print_listint - print the items in the list.
  *
  * @h: listnode
@@ -27,6 +12,9 @@ typedef struct listint_s
 size_t print_listint(const listint_t *h)
 {
 	int count = 0;
+
+	if (h == NULL)
+		return (0);
 
 	while (h != NULL)
 	{
