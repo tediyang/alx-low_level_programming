@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * add_nodeint - add nodes to a list
@@ -17,12 +17,12 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	if (first == NULL)
 		return (NULL);
 
+	first->n = n;
+
 	if (*head == NULL)
 		first->next = NULL;
 	else
 		first->next = *head;
-
-	first->n = n;
 
 	*head = first;
 
