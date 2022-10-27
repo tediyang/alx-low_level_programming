@@ -22,8 +22,8 @@ unsigned int _atoi(char c)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i, j, k, len, result, base;
-	unsigned int num;
+	int i, j, k, len;
+	unsigned int num, base, result;
 
 	if (b == NULL)
 		return (0);
