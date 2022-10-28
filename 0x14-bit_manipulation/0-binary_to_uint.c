@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
- * _atoi - convert to int
- *
- * @c: char
- *
- * Return: integer
- */
-
-unsigned int _atoi(char c)
-{
-	return ((unsigned int) c - '0');
-
-/**
  * binary_to_uint = convert binary to decimal
  *
  * @b: string
@@ -22,32 +10,21 @@ unsigned int _atoi(char c)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i, j, k, len;
-	unsigned int num, base, result;
+	unsigned int result = 0;
+	int i;
 
 	if (!b)
 		return (0);
 
-	result = 0;
-	i = 0;
-	while (b[i])
-		++i;
-
-	len = i - 1;
-
-	for (j = 0; j <= len; j++)
-	{
-		base = 1;
-
-		for (k = j; k < len; k++)
-			base *= 2;
-
-		num = _atoi(b[j]);
-
-		if (num != 0 && num != 1)
+	for (i = 0; b[i] != '\0'; i++)
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
-		result += (num * base);
-	}
+	for (i = 0; b[i] != '\0'; i++)
+	{
+		result <<= 1;
+		if (b[i] == '1')
+			result += 1;
+
 	return (result);
 }
