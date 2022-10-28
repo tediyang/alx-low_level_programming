@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * binary_to_uint = convert binary to decimal
+ * binary_to_uint - convert binary to decimal
  *
- * @b: string
+ * @b: string to be converted
  *
  * Return: value in decimal (base 10)
  */
