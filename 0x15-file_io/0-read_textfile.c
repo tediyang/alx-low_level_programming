@@ -11,32 +11,30 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t file, read_con, countw;
+	ssize_t f, r, w;
 	char *buf;
 
 	if (filename == NULL)
 		return (0);
 
-	file = open(filename, O_RDONLY);
-
-	if (file == -1)
-		return (0);
+	f = open(filename, O_RDONLY);
 
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 		return (0);
 
-	read_con = read(file, buf, letters);
-	if (read_con == -1)
-		return (0);
+	r = read(f, buf, letters);
+	w = write(STDOUT_FILENO, buf, r);
 
-	countw = write(STDOUT_FILENO, buf, read_con);
-	if (countw == -1 || read_con != countw)
+	if (f == -1 || w == -1 || r == -1 || r != w)
+	{
+		free(buf);
 		return (0);
+	}
 
 	free(buf);
 
-	close(file);
+	close(f);
 
-	return (countw);
+	return (w);
 }
