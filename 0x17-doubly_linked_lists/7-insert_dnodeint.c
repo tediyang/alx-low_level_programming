@@ -7,6 +7,7 @@
  * @n: value for new_node
  * Return: address of new_node
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *actual = *h;
@@ -44,3 +45,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		actual = actual->next;
 	}
 	return (NULL);
+}
