@@ -2,7 +2,7 @@
 
 /**
  * hash_table_create - This function creaes an hash table and return a pointer to a newly created table.
- * size: size of the table
+ * @size: size of the table
  * Return: a pointer to new table
  */
 
@@ -20,5 +20,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 	for (i = 0; i < table->size; i++)
 		table->array[i] = NULL;
 
-	return table;
+	return (table);
 }
