@@ -1,5 +1,5 @@
-include "hash_table.h"
-include <stdlib.h>
+#include "hash_table.h"
+#include <stdlib.h>
 
 /*
  * hash_table_create - This function creaes an hash table and return a pointer
