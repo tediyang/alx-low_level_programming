@@ -19,7 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	item = ht->array[index];
 	if (item == NULL)
 		return (NULL);
-	while(item)
+	while (item)
 	{
 		if (strcmp(item->key, key) == 0)
 			return (item->value);
