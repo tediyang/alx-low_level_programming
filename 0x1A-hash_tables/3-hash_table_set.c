@@ -7,14 +7,14 @@
  * Return: A node.
 */
 
-hash_node_t *create_node(char *key, char* value)
+hash_node_t *create_node(char *key, char *value)
 {
     /* Creates a pointer to a new hash table node */
     hash_node_t *node;
     node = malloc(sizeof(hash_node_t));
     if (node == NULL)
         return (NULL);
-    
+
     node->key = malloc(strlen(key) + 1);
     node->value = malloc(strlen(value) + 1);
     if (node->key == NULL || node->value == NULL)
