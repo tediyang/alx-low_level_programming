@@ -11,6 +11,7 @@ hash_node_t *create_node(char *key, char *value)
 {
     /* Creates a pointer to a new hash table node */
 	hash_node_t *node;
+
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (NULL);
@@ -24,7 +25,7 @@ hash_node_t *create_node(char *key, char *value)
 	strcpy(node->value, value);
 	node->next = NULL;
 
-	return node;
+	return (node);
 }
 
 /**
