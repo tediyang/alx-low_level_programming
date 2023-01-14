@@ -1,4 +1,4 @@
-# C/C++_Hash_Tables
+# C/C++ Hash Tables
 ![hash_table](https://miro.medium.com/max/720/0*i3HysiKfYzXkOth6.png)
 
 ## Learning Objectives
