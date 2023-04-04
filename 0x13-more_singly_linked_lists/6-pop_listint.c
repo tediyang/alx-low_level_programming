@@ -1,31 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * pop_listint - remove the parent list.
+ * print_list - prints the lists.
  *
- * @head: the list nodes
+ * @head: param
  *
- * Return: the n value of the first node.
+ * Return: the number of list node.
  */
+
 
 int pop_listint(listint_t **head)
 {
-	listint_t *temp, *list;
-	int n;
+    listint_t *p_node;
 
-	if (head != NULL)
-	{
-		list = *head;
+    /* if no listnode was passed as a parameter */
+    if (head == NULL)
+        return (-1);
 
-		if ((temp = list) != NULL)
-		{
-			list = list->next;
-			n = temp->n;
-			free(temp);
-		}
-		*head = list;
-	}
-	else
-		return (0);
-	return (n);
+    p_node = *head;
+    *head = (*head)->next;
+    p_node->next = NULL;
+    return(p_node->n);
 }
