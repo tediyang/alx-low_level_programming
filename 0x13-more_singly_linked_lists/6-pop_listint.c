@@ -17,7 +17,7 @@ int pop_listint(listint_t **head)
 	listint_t *tmp;
 
 	/* if no listnode was passed as a parameter*/
-	if (head == NULL)
+	if (*head == NULL)
 		return (0);
 
 	tmp = *head;
