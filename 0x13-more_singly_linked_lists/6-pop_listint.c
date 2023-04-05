@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * print_list - prints the lists.
+ * pop_listint - prints the lists.
  *
  * @head: param
  *
@@ -13,14 +13,14 @@
 
 int pop_listint(listint_t **head)
 {
-    listint_t *p_node;
+	listint_t *p_node;
 
-    /* if no listnode was passed as a parameter */
-    if (head == NULL)
-        return (-1);
+	/* if no listnode was passed as a parameter */
+	if (*head == NULL)
+		return (-1);
 
-    p_node = *head;
-    *head = (*head)->next;
-    p_node->next = NULL;
-    return(p_node->n);
+	p_node = *head;
+	*head = (*head)->next;
+	p_node->next = NULL;
+	return (p_node->n);
 }
