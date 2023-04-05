@@ -8,6 +8,7 @@
  * get_nodeint_at_index - get the node at a specific index.
  *
  * @head: the listnode
+ * @index: the node index
  *
  * Return: the node at the specific index.
  */
