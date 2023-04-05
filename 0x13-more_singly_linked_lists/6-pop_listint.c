@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
+
 /**
  * pop_listint - prints the lists.
  *
@@ -10,17 +11,19 @@
  * Return: the number of list node.
  */
 
-
 int pop_listint(listint_t **head)
 {
-	listint_t *p_node;
+	int p_node;
+	listint_t *tmp;
 
-	/* if no listnode was passed as a parameter */
-	if (*head == NULL)
+	/* if no listnode was passed as a parameter*/
+	if (head == NULL)
 		return (-1);
 
-	p_node = *head;
-	*head = (*head)->next;
-	p_node->next = NULL;
-	return (p_node->n);
+	tmp = *head;
+
+	p_node = tmp->n;
+	*head = tmp->next;
+	free(tmp);
+	return (p_node);
 }
