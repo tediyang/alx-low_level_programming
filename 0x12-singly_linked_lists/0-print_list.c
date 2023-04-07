@@ -22,6 +22,7 @@ size_t print_list(const list_t *h)
 			printf("[%li] %s/n", strlen(h->str), h->str);
 		else
 			printf("[0] (nil)");
+		num++;
 		h = h->next;
 	}
 	return (num);
