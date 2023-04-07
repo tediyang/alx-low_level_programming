@@ -13,13 +13,13 @@ size_t print_list(const list_t *h)
 {
 	size_t num = 0;
 
-	if (h == NULL)
-		return (NULL);
+	if (!h)
+		return (0);
 
 	while (h)
 	{
 		if (h->str)
-			printf("[%d] %s/n", strlen(h->str), h->str);
+			printf("[%li] %s/n", strlen(h->str), h->str);
 		else
 			printf("[0] (nil)");
 		h = h->next;
