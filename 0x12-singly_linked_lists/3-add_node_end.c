@@ -32,9 +32,9 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	c_head = *head;
 
-	if (c_head)
+	if (!*head)
 	{
-		c_head = new;
+		*head = new;
 		return (*head);
 	}
 
