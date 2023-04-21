@@ -1,54 +1,51 @@
 #include "search_algos.h"
 
-/**
- * print_array - prints the members of the array.
- *
- * @array: pointer to array
- * @start: beginning of the array.
- * @end: end of array.
- *
- * Return: void
- */
-
-void print_array(int *array, size_t start, size_t end)
-{
-	printf("Searching in array:");
-	for (; start < end; start++)
-	{
-		if (start == (end - 1))
-			printf(" %d", array + start);
-		printf(" %d,", array[start]);
-	}
-}
 
 /**
- * binary_search -  searches for a value using binary search.
- *
- * @array: pointer pointing to the array of int.
- * @size: size of the array.
- * @value: value to search for.
- *
- * Return: returns 0 if found and -1 if not found.
+ * binary_recursive - recusrive algorithm for binary search
+ * @array: pointer to first position
+ * @size: length of array
+ * @value: element to search
+ * Return: index of value
  */
-
-int binary_search(int *array, size_t size, int value)
+size_t binary_recursive(int *array, size_t size, int value)
 {
-	size_t start, mid, end;
+	size_t mid = size / 2;
+	size_t aux;
 
-	if (!array)
+	if (!array || size == 0)
 		return (-1);
 
-	start = 0;
-	mid = size / 2;
-	end = size;
+	printf("Searching in array: ");
+	for (aux = 0; aux < size; aux++)
+		printf("%d%s", array[aux], (aux != size - 1) ? ", " : "\n");
 
-	print_array(array, start, end);
-
-	if ((size_t)value == mid)
+	if (mid && size % 2 == 0)
+		mid--;
+	if (value == array[mid])
 		return (mid);
-	if ((size_t)value < mid)
-		binary_search(array, mid, value);
-	if ((size_t)value > mid)
-		binary_search(array + mid, mid, value);
-	return (-1);
+	if (value < array[mid])
+		return (binary_recursive(array, mid, value));
+
+	mid++;
+	return (binary_recursive(array + mid, size - mid, value) + mid);
+}
+
+
+/**
+ * binary_search - searches for a value in a sorted array
+ * @array: pointer ti first position of array
+ * @size: length of array
+ * @value: value to search
+ * Return: index of value in array
+ */
+int binary_search(int *array, size_t size, int value)
+{
+	int el;
+
+	el = binary_recursive(array, size, value);
+
+	if (el >= 0 && array[el] != value)
+		return (-1);
+	return (el);
 }
